@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #counter {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">Clicks: 0</div>
+    <button id="clickButton">Click Me</button>
+
+    <script>
+        let clickCount = 0;  // Counter for the button clicks
+
+        // Update the counter when the button is clicked
+        document.getElementById('clickButton').addEventListener('click', function() {
+            clickCount++;  // Increment the click count
+            document.getElementById('counter').innerText = `Clicks: ${clickCount}`;  // Update the counter display
+        });
+    </script>
+</body>
+</html>
